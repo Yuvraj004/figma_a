@@ -2,7 +2,7 @@ import React from 'react'
 
 const ProfileSection = () => {
   return (
-    <div className="bg-gray-800 p-4 rounded-lg shadow-md text-white">
+    <div className="bg-gray-800 p-4 rounded-lg shadow-md ">
       <h1 className="text-xl font-bold">About Me</h1>
       <p className="mt-2 text-sm overflow-y-scroll h-32">
         Hello! I'm Dave, your sales rep here from Salesforce. I’ve been working
