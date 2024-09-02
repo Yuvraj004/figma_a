@@ -1,9 +1,18 @@
 "use client";
 import React, { useState } from 'react';
 import { Button } from './ui/button';
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover"
+import { Input } from './ui/input';
+import { Label } from './ui/label';
 
 
 const Gallery = () => {
+  const [image, setImage] = useState('');
+  let num = 3;
   const items = [
     { id: 1, content: 'Slide 1 Content' },
     { id: 2, content: 'Slide 2 Content' },
@@ -27,9 +36,22 @@ const Gallery = () => {
           Gallery
         </Button>
         <div className="flex space-x-4">
-          <Button className="bg-gray-700 text-white px-4 py-2 rounded-lg">
-            + Add Image
-          </Button>
+          
+          <Popover>
+            <PopoverTrigger>
+              <Button className="bg-gray-700 text-white px-4 py-2 rounded-lg">+ Add Image</Button>
+            </PopoverTrigger>
+            <PopoverContent>
+              <div className="grid w-full max-w-sm items-center gap-1.5">
+                <Label htmlFor="picture">Picture</Label>
+                <Input id="picture" type="file" value={image} onChange={(e) => { e.target.value; setImage(image); console.log('uploaded') }}/>
+                
+              </div>
+            </PopoverContent>
+          
+          </Popover>
+
+          
           <Button onClick={prevSlide} className="bg-gray-700 text-white p-2 rounded-full">
             ←
           </Button>

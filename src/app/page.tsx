@@ -15,9 +15,9 @@ export default function Home() {
               <TabsTrigger value="experiences">Experiences</TabsTrigger>
               <TabsTrigger value="recommended">Recommended</TabsTrigger>
             </TabsList>
-            <TabsContent value="AboutMe"><ProfileSection/></TabsContent>
-            <TabsContent value="password">Other Details</TabsContent>
-            <TabsContent value="recommended">Use these recommended settings </TabsContent>
+            <TabsContent value="AboutMe"><ProfileSection category="a" /></TabsContent>
+            <TabsContent value="experiences"><ProfileSection category='x'/></TabsContent>
+            <TabsContent value="recommended"><ProfileSection category='r'/></TabsContent>
           </Tabs>
         
         </div>
